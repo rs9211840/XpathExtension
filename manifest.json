@@ -1,0 +1,20 @@
+{
+	"manifest_version" : 2 ,
+	"name" : "Code for extension",
+	"version" : "1.1.0",
+	"content_scripts" : [
+		{
+			"matches" : ["http://*/*","https://*/*"],
+			"js" : ["content.js"]
+		}
+	],"permissions": [
+		"downloads",
+		"storage",
+		"activeTab",
+		"declarativeContent"
+	  ],
+	"browser_action" : {
+		"default_icon" : "icon16.png",
+		"default_popup" : "popup.html"
+	}
+}
